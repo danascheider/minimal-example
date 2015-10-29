@@ -1,0 +1,34 @@
+<!-- +++++ Contact Section +++++ -->
+<div class="container pt">
+  <div class="row mt">
+    <div class="col-lg-6 col-lg-offset-3 centered">
+      <h3>CONTACT US</h3>
+      <hr>
+      <p>Please contact us if you have any questions or would like to speak
+      at an upcoming meeting. We'll get back to you as soon as we can!</p>
+    </div>
+  </div>
+  <div class="row mt">  
+    <div class="col-lg-8 col-lg-offset-2">
+      <%= form_tag('/contact', method: 'post', id: 'contact-form') do %>
+        <div class="form-group">
+          <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Your Name' %>
+          <br>
+        </div>
+        <div class="form-group">
+          <%= text_field_tag 'email', nil, class: 'form-control', placeholder: 'Enter E-mail' %>
+
+          <br>
+        </div>
+        <div class="form-group">
+          <%= text_field_tag 'subject', nil, class: 'form-control', placeholder: 'Subject' %>
+          <br>
+        </div>
+
+        <%= text_area_tag 'body', nil, class: 'form-control', rows: 6, placeholder: 'Enter your message here' %>
+          <br>
+        <button type="submit" class="btn btn-success">SUBMIT</button>
+      <% end %>         
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->

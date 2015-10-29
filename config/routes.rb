@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
+  resources :meetings, except: :index do
+    collection do 
+      get '/past' => 'meetings#past'
+      get '/upcoming' => 'meetings#upcoming'
+    end
+  end
+
   resources :users, except: :index
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'site#index'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
