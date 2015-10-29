@@ -1,0 +1,8 @@
+language: ruby
+rvm:
+  - 2.2.3
+before_script: 
+  - rake db:setup
+sudo: false
+notifications:
+  email: false
