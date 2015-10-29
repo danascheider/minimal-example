@@ -39,6 +39,7 @@ group :test do
   gem 'simplecov'
   gem 'coveralls'
   gem 'factory_girl'
+  gem 'database_cleaner'
 end
 
 group :development, :test do
