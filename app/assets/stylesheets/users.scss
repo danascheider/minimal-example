@@ -1,3 +1,47 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+  width: 100%;
+
+  tr > th {
+    min-width: 15%;
+  }
+}
+
+#new_user, #login-form, #new-meeting, .edit_user {
+  table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th, td {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  .field, .actions {
+    box-sizing: border-box;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .field input, .field select {
+    width: 100%;
+  }
+}
+
+#about-us {
+  .inset-picture {
+    position: relative;
+    float: left;
+    display: inline;
+    clear: both;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+
+  p {
+    display: inline;
+    position: relative;
+  }
+}

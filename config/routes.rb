@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+  
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
   post '/contact' => 'site#send_mail'
